@@ -10,3 +10,14 @@ def add_gamer(gamer, gamers_list):
         gamers_list.append(gamer)
     else:
         print("Incomplete gamer information.")
+
+# Create a dictionary called kimberly with the name and availability given above.
+# Call add_gamer with kimberly as the first argument and gamers as the second.
+
+
+kimberly = {'name': "Kimberly Warner",
+            'availability':  ["Monday", "Tuesday", "Friday"]}
+
+add_gamer(kimberly, gamers)
+
+print(gamers)
