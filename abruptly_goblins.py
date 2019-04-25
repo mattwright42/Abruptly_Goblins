@@ -61,3 +61,12 @@ def build_daily_frequency_table():
 
 
 count_availability = build_daily_frequency_table()
+
+# Write a function called calculate_availability that takes a list of gamers as an argument gamers_list and a frequency table available_frequency. The function should iterate through each gamer in gamers_list and iterate through each day in the gamer's availability. For each day in the gamer's availability, add one to that date on the frequency table.
+
+
+def calculate_availability(gamers_list, available_frequency):
+    for gamer in gamers_list:
+        for day in gamer['availability']:
+            if day in available_frequency:
+                available_frequency[day] += 1
