@@ -70,3 +70,20 @@ def calculate_availability(gamers_list, available_frequency):
         for day in gamer['availability']:
             if day in available_frequency:
                 available_frequency[day] += 1
+
+# Call calculate_availability with gamers and count_availability. Print out count_availability afterwards.
+
+
+calculate_availability(gamers, count_availability)
+print(count_availability)
+
+# Write a function find_best_night that takes a dictionary availability_table and returns the key with the highest number.
+
+
+def find_best_night(availability_table):
+    most_available = 0
+    for day, availability in availability_table.items():
+        if availability > most_available:
+            best_night = day
+            most_available = availability
+    return best_night
