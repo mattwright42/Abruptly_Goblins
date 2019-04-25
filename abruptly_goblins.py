@@ -87,3 +87,9 @@ def find_best_night(availability_table):
             best_night = day
             most_available = availability
     return best_night
+
+# Call find_best_night with count_availability, store the result in a variable called game_night. Print out game_night to find out which day it is.
+
+
+game_night = find_best_night(count_availability)
+print(game_night)
