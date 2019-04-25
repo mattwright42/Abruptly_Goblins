@@ -93,3 +93,15 @@ def find_best_night(availability_table):
 
 game_night = find_best_night(count_availability)
 print(game_night)
+
+# Create a function available_on_night that takes two parameters: gamers_list and day and returns a list of people who are available on that particular day.
+# Call available_on_night with gamers and game_night and save the result into the variable attending_game_night.
+# Print attending_game_night.
+
+
+def available_on_night(gamers_list, day):
+    return [gamer for gamer in gamers_list if day in gamer['availability']]
+
+
+attending_game_night = (available_on_night(gamers, game_night))
+print("Here are your gamers: " + str(attending_game_night) + "!")
