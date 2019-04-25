@@ -105,3 +105,26 @@ def available_on_night(gamers_list, day):
 
 attending_game_night = (available_on_night(gamers, game_night))
 print("Here are your gamers: " + str(attending_game_night) + "!")
+
+# Define a string, called form_email with interpolation variables {name}, {day_of_week}, and {game} (in case we decide we want to use this featureset to host a different game night). Use it to tell your gaming attendees the night their Abruptly Goblins! game can be played.
+
+form_email = """
+Dear {name},
+
+The Sorcery Society is excited to announce {game} night! Come by on {day_of_week} to get your game on.
+
+Magically Yours,
+
+The Sorcery Society
+"""
+
+# Create a function send_email with three parameters: gamers_who_can_attend, day, and game. Print form_email for each gamer in gamers_who_can_attend with the appropriate day and game. Call send_email with attending_game_night, game_night, and "Abruptly Goblins!".
+
+
+def send_email(gamers_who_can_attend, day, game):
+    for gamer in gamers_who_can_attend:
+        print(form_email.format(
+            name=gamer['name'], day_of_week=day, game=game))
+
+
+send_email(attending_game_night, game_night, "Abruptly Goblins!")
