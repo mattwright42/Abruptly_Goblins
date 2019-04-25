@@ -44,3 +44,20 @@ add_gamer({'name': 'Michel Trujillo', 'availability': [
           "Monday", "Tuesday", "Wednesday"]}, gamers)
 
 print(gamers)
+
+# Create a function called build_daily_frequency_table that takes no argument returns a dictionary with the days of the week as keys and 0s for values. We'll be using this to count the availability per night. Call build_daily_frequency_table and save the results to a variable called count_availability.
+
+
+def build_daily_frequency_table():
+    return {
+        "Monday": 0,
+        "Tuesday": 0,
+        "Wednesday": 0,
+        "Thursday": 0,
+        "Friday": 0,
+        "Saturday": 0,
+        "Sunday": 0
+    }
+
+
+count_availability = build_daily_frequency_table()
