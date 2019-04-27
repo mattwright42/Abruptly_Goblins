@@ -128,3 +128,18 @@ def send_email(gamers_who_can_attend, day, game):
 
 
 send_email(attending_game_night, game_night, "Abruptly Goblins!")
+
+# Create a list unable_to_attend_best_night of everyone in gamers that wasn't able to attend game night on game_night.
+unable_to_attend_best_night = [
+    gamer for gamer in gamers if game_night not in gamer['availability']]
+# Create second_night_availability frequency table by calling build_daily_frequency_table.
+second_night_availability = build_daily_frequency_table()
+# Call calculate_availability with unable_to_attend_best_night and second_night_availability.
+calculate_availability(unable_to_attend_best_night, second_night_availability)
+# Call find_best_night with the now filled-in second_night_availability, save the results in second_night.
+second_night = find_best_night(second_night_availability)
+
+# Create the list available_second_game_night by calling available_on_night with gamers and second_night
+available_second_game_night = available_on_night(gamers, second_night)
+# Let the gamers know by calling send_email with available_second_game_night, second_night, and "Abruptly Goblins!"
+send_email(available_second_game_night, second_night, "Abruptly Goblins!")
